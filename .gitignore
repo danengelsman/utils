@@ -1,21 +1,43 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-dist/
-build/
-.venv/
-venv/
-*.egg
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Environment
+node_modules
+dist
+dist-ssr
+dist-server
+*.local
+
+# Environment variables — never commit these
 .env
+.env.local
+.env.*.local
 
-# OS
+# SQLite database files
+*.db
+*.sqlite
+
+# Backup files
+*.bak
+
+# Build artifacts and zips
+*.zip
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Editors
-.vscode/
-.idea/
-*.swp
+# Agent runtime state — openclaw.json embeds API keys and bot tokens
+.openclaw/
