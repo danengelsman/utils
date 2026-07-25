@@ -1,33 +1,80 @@
-# utils
+# Vertano
 
-Personal utilities and scripts.
+**The truth engine for building your content empire.**
 
-## Contents
+Vertano is a step-by-step content creation system that helps beginners build YouTube channels, grow audiences, and monetize their content. Through structured sprints, milestone tracking, and gamification, Vertano turns content dreams into measurable results.
 
-### `.local/bin/logging.py`
+## ✨ Features
 
-A Python logging factory with optional per-handler level filtering.
+- **SprintBuilder**: Create focused content campaigns with daily tasks and deadlines
+- **ProgressDashboard**: Track your growth metrics and milestone achievements
+- **MonetizationHub**: Discover and implement multiple revenue streams for your content
+- **Gamification**: Earn badges, complete challenges, and level up your content game
+- **Authentication**: Secure Supabase auth keeps your progress safe
 
-```python
-from logging_util import get_logger
+## 🚀 Getting Started
 
-log = get_logger("myapp", log_file="app.log")
-log.info("started")
+### Prerequisites
 
-# Only emit WARNING–ERROR to stdout, everything to the file
-log = get_logger("myapp", log_file="app.log", min_level=30, max_level=40)
+- Node.js 18+ 
+- npm or yarn
+- Supabase account (for authentication and data storage)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/danengelsman/Vertano.git
+cd Vertano
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+
+# Start development server
+npm run dev
 ```
 
-**`get_logger(name, level, log_file, fmt, datefmt, min_level, max_level)`**
+Open [http://localhost:5173](http://localhost:5173) to start building.
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `name` | — | Logger name |
-| `level` | `INFO` | Root logger level |
-| `log_file` | `None` | Optional file path; parent dirs created automatically |
-| `fmt` | `%(asctime)s [%(levelname)s] %(name)s: %(message)s` | Log format |
-| `datefmt` | `%Y-%m-%d %H:%M:%S` | Timestamp format |
-| `min_level` | `None` | Clamp handler to this minimum level |
-| `max_level` | `None` | Clamp handler to this maximum level |
+## 🛠️ Tech Stack
 
-Returns the same logger on repeated calls (idempotent).
+- **Framework**: React + TypeScript + Vite
+- **UI**: Tailwind CSS + shadcn/ui
+- **Backend**: Supabase (PostgreSQL + Auth)
+- **Data**: React Query + React Hook Form + Zod
+- **State**: Zustand (planned)
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── features/         # Feature modules (SprintBuilder, MonetizationHub, etc.)
+├── lib/              # Utilities and configurations
+├── hooks/            # Custom React hooks
+└── types/            # TypeScript type definitions
+```
+
+## 🎯 Roadmap
+
+- [ ] User onboarding wizard
+- [ ] Content calendar integration
+- [ ] Analytics dashboard
+- [ ] Team/collaborator support
+- [ ] Mobile app (React Native)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guidelines before submitting PR's.
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
+
+---
+
+**Vertano** means "true" in Italian. Build your content empire with truth, iteration, and measurable progress.
